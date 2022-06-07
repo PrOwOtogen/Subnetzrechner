@@ -94,6 +94,22 @@ function set_txt(a_h,s_a,n_s,ip_array){
     not_w.innerHTML += " " + n_s - s_a;
     anzahl_sub.innerHTML += " " + n_s;
     //split s_a
-    submask.innerHTML += "255.255.255: " + (256-s_a) + "||" + ip_array[0] + "." + ip_array[1] + "." + ip_array[2] + "." + 0 + "/";
+    var cidr = [
+        {
+            256: "24",
+            128: "25",
+            64: "26",
+            32: "27",
+            16: "28",
+            8: "29",
+            4: "30",
+            2: "31",
+            1: "32"
+        }
+    ];
+    //calculate cidr
+    console.log()
+
+    submask.innerHTML += "255.255.255." + (256-a_h)+ "<br>oder auch: " + ip_array[0] + "." + ip_array[1] + "." + ip_array[2] + "." + 0 + "/" + cidr[0][n_s];
 }
 
