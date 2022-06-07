@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnetzrechner</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+    <div class="maintext">
+        <h1>Subnetzrechner</h1>
+        <p>
+            Hier kannst du einen Subnetz-Bereich eingeben und erhalten
+            du die Anzahl der Hosts und die Anzahl der Subnetze.
+    </div>
+    <div class="forms">
+        <form method="post" class="form">
+            <label for="ip">IP-Adresse:</label>
+            <input type="text" name="ip" id="ip" placeholder="IP-Adresse" required>
+            <label for="subnetz">Anzahl der Subnetze:</label>
+            <input type="text" name="subnetz" id="subnetz" placeholder="Subnetze"required>
+            <input type="button" value="Berechnen" onclick="calc()">
+        </form>
+
+    </div>
+    <div id="outputtable">
+        <table>
+            <tr>
+                <th>Anzahl</th>
+                <th>Subnetz</th>
+                <th>Hostbereich</th>
+                <th>Broadcast</th>
+            </tr>
+        </table>
+        <div id="anzahladressen">
+            <h2>Pro Subnetz:</h2>
+            <p id="anzahlips">IP-Adressen: </p>
+            <p id="anzahlhosts">Nutzbaren IPs: </p>
+            <p id="anzahlnotwant">Anzahl der nicht gewollten Subnetze: </p>
+            <p id="anzahlsubs">Anzahl der Subnetze: </p>
+            <p id="submask">Subnetzmaske: </p>
+
+        </div>
+    </div>
+    <script src="sub.js"></script>
+</body>
+</html>
